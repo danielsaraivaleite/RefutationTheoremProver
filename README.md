@@ -40,6 +40,7 @@ can(dave,C1) v can(fred,C1)
 ```
 
 **Output**
+```
 Result: YES
 Proof tree
 
@@ -65,3 +66,4 @@ C2 / waltz
 C1 / waltz
 X / dave
 Son / fred
+```

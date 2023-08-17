@@ -6,9 +6,9 @@ Code was built in 2007 during a Post-graduate course in CS.
 ```
 java -jar "RefutationProof.jar" <filename>
 ```
-<filename> is a plan-text file containg in each line a clausal form. Last clause must be the negated conclusion (the opposite of what we want to prov). 
+- <filename> is a plan-text file containg in each line a clausal form. Last clause must be the negated conclusion (the opposite of what we want to prov). 
 
--Variables are are allowed and must start with a **Capital letter**.
+- Variables are are allowed and must start with a **Capital letter**.
 
 - relations are allowed. Example relation(a, b).
 

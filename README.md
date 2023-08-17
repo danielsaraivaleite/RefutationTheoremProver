@@ -12,7 +12,9 @@ java -jar "RefutationProof.jar" <filename>
 
 - **Relations** are allowed. Example relation(a, b).
 
--Comments must start with #
+- **Comments** must start with #
+
+## Algorithm
 
 The refutation algorithm will read the clauses and build a proof tree. The theorem is proved whenever a contraction is found.
 **Output** is a YES/NO answer, the proof tree and the variables table resolution. 

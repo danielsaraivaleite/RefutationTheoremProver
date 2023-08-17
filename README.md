@@ -1,5 +1,5 @@
 # Refutation Theorem Prover
-A Object-oriented Java implementation of a simple theorem prover by refutation.
+A Object-oriented Java implementation of a simple logic theorem prover by refutation.
 Code was built in 2007 during a Post-graduate course in CS.
 
 # Usage

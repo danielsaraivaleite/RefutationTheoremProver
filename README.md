@@ -21,7 +21,7 @@ The refutation algorithm will read the clauses and build a proof tree. The theor
 
 See, for instance, http://intrologic.stanford.edu/lectures/lecture_06.pdf for further reference on clausal form and refutation proofs.
 
-## Example
+## Example 1
 
 **Input file content (Example1.txt)**
 ```
@@ -74,3 +74,59 @@ C1 / waltz
 X / dave
 Son / fred
 ```
+
+## Example 2
+
+**Input file content (Example2.txt)**
+```
+# Facts:
+# Tony, Mike and John belong to the Alpine Club.
+# Every member of the Alpine Club who is not a skier is a mountain climber.
+# Mountain climbers don't like the rain.
+# Anyone who doesn't like snow is not a skier.
+# Mike doesn't like what Tony likes and he likes everything Tony doesn't like.
+# Tony likes rain and snow.
+# Query: 
+# “Is there a member of the Alpine Club who is a mountain climber but not a skier?”
+
+#### Premises
+alpine(tony)
+alpine(john)
+alpine(mike)
+~alpine(X) v skier(X) v climber(X)
+~climber(Y) v ~likes(rain, Y)
+likes(snow, Z) v ~skier(Z)
+~likes(W, tony)  v ~likes(W, mike)
+likes(U, tony) v likes(U, mike)
+likes(rain, tony)
+likes(snow, tony)
+### Negated Conclusion
+~alpine(E) v ~climber(E) v skier(E)
+```
+
+**Output**
+```
+Result: YES
+Proof tree
+
+nil
+│  ├──skier(mike)
+│  │  ├──~alpine(E) v skier(E) v ~alpine(E) v skier(E)
+│  │  │  ├──~alpine(E) v ~climber(E) v skier(E)
+│  │  │  └──~alpine(X) v skier(X) v climber(X)
+│  │  └──alpine(mike)
+│  └──~skier(mike)
+│  │  ├──~likes(snow , mike)
+│  │  │  ├──likes(snow , tony)
+│  │  │  └──~likes(W , tony) v ~likes(W , mike)
+│  │  └──likes(snow , Z) v ~skier(Z)
+
+
+Instances:
+W / snow
+E / mike
+Z / mike
+X / mike
+
+```
+

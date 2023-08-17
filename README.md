@@ -20,7 +20,7 @@ See, for instance, http://intrologic.stanford.edu/lectures/lecture_06.pdf for fu
 
 ## Example
 
-**Input file content**
+**Input file content (Example1.txt)**
 ```
 # Example
 # Source: http://scom.hud.ac.uk/scomtlm/cam326/logic/node9.html

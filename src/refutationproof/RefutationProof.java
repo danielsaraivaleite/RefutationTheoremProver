@@ -90,6 +90,9 @@ public class RefutationProof {
                 System.out.println("Result: YES");
                 System.out.println("Proof tree\n");
                 System.out.println(prover.getFinalNode().buildTreeBottomUp(prover.getFinalNode()).toString());
+                System.out.println("\nInstances:");
+                System.out.println(prover.getFinalNode().getTable().toString());
+                
           }
           else
           {

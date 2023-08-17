@@ -7,7 +7,9 @@ java -jar "RefutationProof.jar" <filename>
 
 <filename> is a plan-text file containg in each line a clausal form. Last clause must be the negated conclusion (the opposite of what we want to prov). 
 
--Variables and relations are allowed. 
+-Variables are are allowed and must start with a **Capital letter**.
+
+- relations are allowed. Example relation(a, b).
 
 -Comments must start with #
 

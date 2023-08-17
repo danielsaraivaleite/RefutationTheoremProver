@@ -5,7 +5,7 @@ Code was built in 2007 during a Post-graduate course in CS.
 ## Usage
 java -jar "RefutationProof.jar" <filename>
 
-<filename> is a plan-text file containg in each line a clausal form. Last clause must be the negated conclusion (the opposite of what we want to prov).
+<filename> is a plan-text file containg in each line a clausal form. Last clause must be the negated conclusion (the opposite of what we want to prov). 
 
 -Variables and relations are allowed. 
 
@@ -13,6 +13,8 @@ java -jar "RefutationProof.jar" <filename>
 
 The refutation algorithm will read the clauses and build a proof tree. The theorem is proved whenever a contraction is found.
 **Output** is a YES/NO answer, the proof tree and the variables table resolution. 
+
+See, for instance, http://intrologic.stanford.edu/lectures/lecture_06.pdf for further reference on clausal form and refutation proofs.
 
 ## Example
 

@@ -12,7 +12,7 @@ java -jar "RefutationProof.jar" <filename>
 -Comments must start with #
 
 The refutation algorithm will read the clauses and build a proof tree. The theorem is proved whenever a contraction is found.
-**Output** is a YES/NO answer, the proof tree and the variables table. 
+**Output** is a YES/NO answer, the proof tree and the variables table resolution. 
 
 ## Example
 

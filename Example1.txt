@@ -1,0 +1,19 @@
+# Example
+# Source: http://scom.hud.ac.uk/scomtlm/cam326/logic/node9.html
+# Dave and Fred are members of a dancing club in which no member can 
+# both  waltz  and jive.   Fred"s dad can"t waltz and  Dave  can  do 
+# whatever  fred can"t do.  If a child can do something, then their 
+# parents can do it also.
+#
+#Prove that there is a member of the dancing club who can"t jive.
+
+m(dave)
+m(fred)
+~m(X) v ~can(X,waltz) v ~can(X,jive)
+p(dadfred,fred)       
+~can(dadfred,waltz)
+can(dave,C1) v can(fred,C1) 
+~p(Father,Son) v ~can(Son,C2) v can(Father,C2)
+
+# Negated conclusion
+~m(Person) v can(Person,jive)
